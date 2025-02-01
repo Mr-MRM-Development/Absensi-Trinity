@@ -1,0 +1,80 @@
+body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background: #151515;
+            color: #fff;
+        }
+        .form-container, .table-container {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+            width: 90%;
+            color: #000;
+        }
+
+        .table-container {
+           overflow: scroll;
+           max-height: 150px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px 0;
+            margin-top: 5px;
+            border: none;
+            border-bottom: solid 1px #000;
+            background: none;
+            outline: none;
+        }
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+            background: #3d8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .qr-container {
+            margin-top: 20px;
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 12px auto;
+            width: 90%;
+            border-radius: 8px;
+            color: #000;
+            overflow-x: hidden; 
+        }
+        #reader {
+            width: 100%;
+            margin: auto;
+        }
+        #result {
+            font-size: 18px;
+            font-weight: bold;
+            color: green;
+            margin-top: 10px;
+        }
+        table {
+            max-width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #ddd;
+        }
+        .emailTd{
+          overflow-x: hidden;
+          max-width: 100px;
+        }
