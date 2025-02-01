@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            color: #fff;
+            background: #151515;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            background: #3d8;
+            border: none;
+            borderradius: 12px;
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Silakan Pilih:</h2>
+    <button onclick="memberClick()">Member</button>
+    <button onclick="adminClick()">Admin</button>
+
+    <script>
+        function memberClick() {
+            window.location.href = "Register.html"; // Arahkan ke halaman 1.html
+        }
+
+        function adminClick() {
+            let password = prompt("Masukkan password admin:");
+            let correctPassword = "trinitySUCSESS"; // Ganti dengan password yang diinginkan
+
+            if (password === correctPassword) {
+                alert("Login berhasil! Anda masuk sebagai Admin.");
+                window.location.href = "Absensi.html"; // Arahkan ke halaman 2.html
+            } else {
+                alert("Password salah! Akses ditolak.");
+            }
+        }
+    </script>
+
+</body>
+</html>

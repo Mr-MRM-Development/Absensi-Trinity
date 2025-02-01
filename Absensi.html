@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi dengan QR Scanner dan Suara</title>
+    <script src="html5-qrcode.min.js"></script> <!-- Pastikan file ini ada di folder proyek -->
+    <link rel="stylesheet" href="styles/absensi.css">
+</head>
+<body>
+
+    <h2>Form Absensi Trinity</h2>
+		
+		   <div class="qr-container">
+        <h3>Scan QR Code untuk Absensi:</h3>
+        <div id="reader"></div>
+        <p id="result">Hasil Scan: </p>
+    </div>
+
+    <div class="form-container">
+        <div class="form-group">
+            <label>Nama:</label>
+            <input type="text" id="name" placeholder="Hasil scan nama" readonly>
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="Hasil scan email" readonly>
+        </div>
+        <button onclick="submitAbsensi()">Submit Absen</button>
+    </div>
+
+    <h2>Riwayat Absensi</h2>
+    <div class="table-container">
+        <table id="absensiTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Waktu Absen</th>
+                </tr>
+            </thead>
+            <tbody id="absensiBody">
+                <!-- Data absensi akan ditampilkan di sini -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="scripts/absensi.js">
+       
+    </script>
+
+</body>
+</html>
