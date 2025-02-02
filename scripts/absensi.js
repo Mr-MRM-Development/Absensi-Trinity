@@ -55,3 +55,31 @@ function onScanSuccess(decodedText, decodedResult) {
             document.getElementById("name").value = "";
             document.getElementById("email").value = "";
         }
+
+function downloadTable() {
+    let tableHTML = `
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Tabel Absensi Trinity</title>
+            <style>
+                body { font-family: Arial, sans-serif; text-align: center; }
+                h1 { color: blue; }
+                table { width: 80%; margin: auto; border-collapse: collapse; }
+                th, td { border: 1px solid black; padding: 8px; text-align: center; }
+                th { background-color: #ddd; }
+            </style>
+        </head>
+        <body>
+            <h1>Tabel Absensi Trinity</h1>
+            ${document.getElementById("absensiTable").outerHTML}
+        </body>
+        </html>
+    `;
+
+    let blob = new Blob([tableHTML], { type: "text/html" });
+    let link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "absensi.html";
+    link.click();
+}

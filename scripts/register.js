@@ -4,7 +4,7 @@ function generateQR() {
             var password = document.getElementById("password").value;
 
             if (name === "" || email === "" || password === "" || !email.includes("@")) {
-                alert("Harap isi semua data atau data kurang valid!");
+                //alert("Harap isi semua data!");
                 return;
             }
 
